@@ -1,16 +1,41 @@
 <form ng-submit="vm.addParty()" class="form-inline party-form">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="name" required>
+        <input ng-model="vm.newParty.name"type="text" class="form-control" placeholder="name" required>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="phone" required>
+        <input ng-model="vm.newParty.phone" type="text" class="form-control" placeholder="phone" required>
     </div>
     <div class="form-group">
-        <input type="number" class="form-control" placeholder="size of party" required>
+        <input ng-model="vm.newParty.size"type="number" class="form-control" placeholder="size of party" required>
     </div>
     <button type="submit" class="btn btn-primary">Add Party</button>
 </form>
 
-{{vm.parties}}
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Done?</th>
+            <th>Info</th>
+            <th>Notified?</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="party in vm.parties">
+        <td>
+<!--            TODO: Checkbox to display party.done property-->
+        </td>
+        <td>
+            <div><strong>{{party.name}} {{party.size}}</strong></div>
+            <div>{{party.phone}}</div>
+        </td>
+        <td>
+            <div>{{party.notified ? 'Yes' : 'No'}}</div>
+        </td>
+        <td>
+<!--            TODO: button that sends text to the party-->
+<!--            TODO: button that removes this party-->
+        </td>
+    </tr>
+</table>
 
 
