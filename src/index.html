@@ -11,6 +11,10 @@
     
 <body>
     this is the body
+    
+    <!--this is the main content that changes based on the route-->
+    <ng-view></ng-view>
+    
     <!--Third-party JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -21,5 +25,10 @@
     
     <!--Main App Module-->
     <script src="app/app.module.js"></script>
+    
+    <!--Landing Module-->
+    <script src="app/landing/landing.module.js"></script>
+    <script src="app/landing/config.route.js"></script>
+    
 </body>
 </html>
